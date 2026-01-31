@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HealthVault 2.0</title>
+</head>
+
+<body>
+    <div class="bg">
+        <h1>HealthVault 2.0</h1>
+        <p>Your health. One dashboard.</p>
+
+        <div class="card">
+            <h3>Enter Your Details</h3>
+            <input type="text" id="name" placeholder="Full Name"><br><br>
+            <input type="number" id="age" placeholder="Age"><br><br>
+            <input type="text" id="condition" placeholder="Known Conditions (optional)"><br><br>
+            <button onclick="saveProfile()">Save Profile</button>
+        </div>
+
+        <div class="card" id="profile">
+            <h3>User Profile</h3>
+            <p>No profile created yet.</p>
+        </div>
+
+
+        <div class="card">
+            <h3>Upload Health Report</h3>
+            <input type="file">
+            <button onclick="uploadReport()">Upload</button>
+            <p id="uploadStatus" style="color: green; font-size: 14px;"></p>
+
+        </div>
+
+        <div class="card" id="summary">
+            <h3>AI Health Summary</h3>
+            <p>No report uploaded yet.</p>
+        </div>
+
+        <div class="card">
+            <h3>Privacy Control</h3>
+            <label>
+                <input type="checkbox" onchange="togglePrivacy(this)">
+                Allow doctor access
+            </label>
+            <p id="privacyStatus">Your data is private.</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
